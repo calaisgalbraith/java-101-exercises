@@ -15,9 +15,7 @@ import java.util.List;
 
 public class Java101Exercises {
 
-    /**
-     * LEVEL: BASIC
-     */
+    /*** LEVEL: BASIC*/
 
     /**
      * Exercise 001 - Add Ints
@@ -37,7 +35,6 @@ public class Java101Exercises {
 
     /**
      * Exercise 003 - Say Codeup
-     *
      * Write a method to return an array of nine strings with the message below using asterisk.
      *
      *
@@ -50,11 +47,6 @@ public class Java101Exercises {
      *         *               *       *             *       *              *       *                    *               *       *
      *           *           *            *       *          *             *        *                       *         *          *
      *             * * * * *                 * *             * * * * * * *          * * * * * * * *            * * *             *
-     *
-     *
-     *
-     * LEVEL: BASIC
-
      */
     public static String[] sayCodeup003() {
         String[] astericks =
@@ -129,56 +121,47 @@ public class Java101Exercises {
         return a % b;
     }
 
-    /**
-     * LEVEL: EASY
-     */
+    /*** LEVEL: EASY*/
 
     /**
      * Exercise 011 - Preform Indicate Operation
      * Write a method with 3 parameters; a String and 2 doubles. The string will be an operation that the operation
      * needs to process on the two operands. Return the result if the operation. Return 0.0 if the operation is not
      * one of the four specified. The operation should be case sensitive.
-     *
-     * LEVEL: EASY
-     *
-     * @param operation     ADD, SUB, MUL, DIV
-     * @param op1           First operand
-     * @param op2           Second operand
-     * @return              Result
      */
     public static double preformIndicatedOperation011(String operation, double op1, double op2) {
-        // TODO: Write code here
-        return 0;
+        return switch (operation) {
+            case "ADD" -> op1 + op2;
+            case "SUB" -> op1 - op2;
+            case "MUL" -> op1 * op2;
+            case "DIV" -> op1 / op2;
+            default -> 0.0;
+        };
     }
 
     /**
      * Exercise 012 - Find Factors
      * Find all of the factors for a given positive integer (int). The result needs to be sorted in ascending order.
-     *
-     * LEVEL: EASY
-     *
-     * @param num       The number to be factored
-     * @return          An Integer ArrayList of factors of num.
      */
     public static ArrayList<Integer> findFactors012(int num) {
-        // TODO: Write code here
-        return  null;
+        ArrayList<Integer> factors = new ArrayList<>();
+        
+        for(int i = 1; i <= num; i++){
+            if(num % i == 0){
+                factors.add(i);
+            }
+        }
+        
+        return factors;
     }
 
     /**
      * Exercise 013 - Get Nearest Integer to Real Sum
      * Given a two double parameters, return the nearest integer sum. If a number is half-way between to integers,
      * round up for positive sums and down for negative sums.
-     *
-     * LEVEL: EASY
-     *
-     * @param firstRealAddend    First real number
-     * @param secondRealAddend    Second real number
-     * @return      Integer sum
      */
     public static int getNearestIntegerToRealSum013(double firstRealAddend, double secondRealAddend ) {
-        // TODO: Write code here
-        return 0;
+        return (int) Math.round(firstRealAddend + secondRealAddend);
     }
 
     /**
@@ -220,6 +203,8 @@ public class Java101Exercises {
      * @return
      */
     public static boolean findTwoAddends015(int[] nums, int n) {
+        boolean equalsNumber = false;
+
         // TODO: Write code here
         return false;
     }
