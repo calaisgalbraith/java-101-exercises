@@ -195,17 +195,16 @@ public class Java101Exercises {
      * equal n.
      *
      * For example, given [7, 15, 3, 6, 8] and n equal to 13, return true since 7 + 6 is 13.
-     *
-     * LEVEL: EASY
-     *
-     * @param nums
-     * @param n
-     * @return
      */
     public static boolean findTwoAddends015(int[] nums, int n) {
-        boolean equalsNumber = false;
+        //goes through the array
+        for(int i = 0; i < nums.length; i++){
+            //goes through array checking each one if they add to n or not
+            if(nums[i] + nums[i +1] == n){
+                return true;
+            }
+        }
 
-        // TODO: Write code here
         return false;
     }
 
